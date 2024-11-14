@@ -16,7 +16,6 @@
 <!-- Навигационные кнопки -->
 <div class="nav-buttons">
     <button class="nav-button" onclick="scrollToSection('easy')">Лёгкий уровень</button>
-    <button class="nav-button" onclick="scrollToSection('medium')">Средний уровень</button>
     <button class="nav-button" onclick="scrollToSection('high')">Высокий уровень</button>
     <button class="nav-button" onclick="scrollToSection('text')">Текстовые задачи</button>
     <button class="nav-button" onclick="scrollToSection('tasks_koshey')">Задачи от Кощея</button>
@@ -53,15 +52,9 @@
     </div>
 </section>
 
-<!-- Средний уровень -->
-<section class="section" id="medium">
-    <h2>Средний уровень</h2>
-    <div id="medium-tasks-container"></div>
-</section>
-
 <!-- Высокий уровень -->
 <section class="section" id="high">
-    <h2>Высокий уровень</h2>
+    <h2>Слишком высокий уровень</h2>
     <div class="task">Найдите трёхзначное число, если его сумма цифр равна 9 и разность между сотнями и десятками равна 2.</div>
     <div class="equation">\( 2a + b - c = 7, \quad a + 2b = 9, \quad b + c = 10 \)</div>
     <div class="equation">\( x^2 + y^2 = 25, \quad x + y = 10 \)</div>
@@ -92,12 +85,12 @@
         <div class="hint" style="display: none;">Процентные увеличения применяются последовательно, а не суммарно.</div>
     </div>
     <div class="task">
-        <p>Мотоциклист проехал расстояние между двумя городами, равное 980 км, за 4 дня...</p>
+        <p>Мотоциклист проехал расстояние между двумя городами, равное 980 км, за 4 дня. В первый день он проехал на 80 км меньше, чем во второй день, в третий день - половину расстояния, пройденного за первые два дня, а в четвертый день - оставшиеся 140 км. Какое расстояние проехал мотоциклист в третий день?</p>
         <button class="hint-button" onclick="toggleHint(this)">Подсказка</button>
         <div class="hint" style="display: none;">Сначала определите расстояния для первых двух дней, затем половину и остаток.</div>
     </div>
     <div class="task">
-        <p>За год Света прочла 90 книг. Книг русских с русскими сказками...</p>
+        <p>За год Света прочла 90 книг. Книг русских с русскими сказками в 2 раза больше, чем с зарубежными. А фантастической литературы на половину меньше, чем русских и зарубежных сказок вместе. Сколько книг с зарубежными сказками прочитала Света?</p>
         <button class="hint-button" onclick="toggleHint(this)">Подсказка</button>
         <div class="hint" style="display: none;">Используйте соотношения для расчета количества книг каждого типа.</div>
     </div>
