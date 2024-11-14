@@ -1,0 +1,218 @@
+/* Основные стили страницы */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    color: #4b79a1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 3em;
+    margin-top: 20px;
+}
+
+/* Оформление разделов */
+.section {
+    width: 80%;
+    max-width: 800px;
+    background: #ffffff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.section:hover {
+    transform: scale(1.02);
+}
+
+h2 {
+    color: #ff6f61;
+    font-size: 2em;
+    text-align: center;
+}
+
+.task, .equation {
+    margin: 15px 0;
+    padding: 10px;
+    background: #e7f3f9;
+    border-left: 4px solid #4b79a1;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.task:hover, .equation:hover {
+    background: #cfe0f2;
+}
+
+/* Порядковый номер задач и уравнений */
+.task::before, .equation::before {
+    content: '⭐';
+    margin-right: 8px;
+    color: #ff6f61;
+}
+
+/* Анимация при наведении на раздел */
+.section:hover .task, .section:hover .equation {
+    color: #4b79a1;
+}
+
+/* Плавающие кнопки навигации по уровню сложности */
+.nav-buttons {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-button {
+    padding: 10px 15px;
+    background-color: #4b79a1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #ff6f61;
+}
+
+.nav-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Плавная прокрутка */
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    .section {
+        width: 90%;
+        padding: 10px;
+    }
+    .nav-button {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+}
+
+.nav-button-mini {
+    padding: 5px 15px;
+    background-color: rgba(75, 121, 161, 0.66);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+}
+
+.nav-button-mini:hover {
+    background-color: #ff6f61;
+}
+
+.nav-button-mini:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.section {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #444;
+}
+
+.task {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+/* Навигационные кнопки */
+.nav-button {
+    background-color: #61dafb;
+    border: none;
+    padding: 12px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #21a1f1;
+}
+
+.nav-button.active {
+    background-color: #0f7ecf;
+    color: white;
+}
+
+/* Подсказки */
+.hint-button {
+    background-color: #b0c4de;
+    border: none;
+    padding: 8px 16px;
+    font-size: 0.9em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hint-button:hover {
+    background-color: #8aa7c4;
+}
+
+.hint {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 3px solid #61dafb;
+    margin-top: 5px;
+    display: none;
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    .section {
+        width: 90%;
+        padding: 10px;
+    }
+    .nav-button {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+}

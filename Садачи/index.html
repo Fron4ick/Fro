@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сборник задач на подбор корней</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<h1>Сборник задач на подбор корней</h1>
+
+<!-- Навигационные кнопки -->
+<div class="nav-buttons">
+    <button class="nav-button" onclick="scrollToSection('easy')">Лёгкий уровень</button>
+    <button class="nav-button" onclick="scrollToSection('medium')">Средний уровень</button>
+    <button class="nav-button" onclick="scrollToSection('high')">Высокий уровень</button>
+    <button class="nav-button" onclick="scrollToSection('text')">Текстовые задачи</button>
+    <button class="nav-button" onclick="scrollToSection('tasks_koshey')">Задачи от Кощея</button>
+    <button class="nav-button" onclick="scrollToSection('tasks_leshy')">Задачи от Лешего</button>
+</div>
+
+<!-- Легкий уровень -->
+<section class="section" id="easy">
+    <h2>Лёгкий уровень</h2>
+    <div class="equation">
+        \( x + y = 10, \quad x \times y = 24 \)<p></p>
+        <button class="nav-button-mini" onclick="toggleHint(this)">Подсказка</button>
+        <div class="hint" style="display: none;">\( x = 6, \quad y = 4 \) или \( x = 4, \quad y = 6 \)</div>
+    </div>
+    <div class="equation">
+        \( x + y = 8, \quad x - y = 4 \)<p></p>
+        <button class="nav-button-mini" onclick="toggleHint(this)">Подсказка</button>
+        <div class="hint" style="display: none;">\( x = 6, \quad y = 2 \)</div>
+    </div>
+    <div class="equation">
+        \( 2x + y = 10, \quad x + 2y = 8 \)<p></p>
+        <button class="nav-button-mini" onclick="toggleHint(this)">Подсказка</button>
+        <div class="hint" style="display: none;">\( x = 2, \quad y = 3 \)</div>
+    </div>
+    <div class="equation">
+        \( x + y = 12, \quad x \times y = 32 \)<p></p>
+        <button class="nav-button-mini" onclick="toggleHint(this)">Подсказка</button>
+        <div class="hint" style="display: none;">\( x = 8, \quad y = 4 \) или \( x = 4, \quad y = 8 \)</div>
+    </div>
+    <div class="equation">
+        Найдите такие числа \( a \) и \( b \), для которых \( a + b = 12 \) и \( a \times b = 20 \).<p></p>
+        <button class="nav-button-mini" onclick="toggleHint(this)">Подсказка</button>
+        <div class="hint" style="display: none;">\( a = 10, \quad b = 2 \) или \( a = 2, \quad b = 10 \)</div>
+    </div>
+</section>
+
+<!-- Средний уровень -->
+<section class="section" id="medium">
+    <h2>Средний уровень</h2>
+    <div id="medium-tasks-container"></div>
+</section>
+
+<!-- Высокий уровень -->
+<section class="section" id="high">
+    <h2>Высокий уровень</h2>
+    <div class="task">Найдите трёхзначное число, если его сумма цифр равна 9 и разность между сотнями и десятками равна 2.</div>
+    <div class="equation">\( 2a + b - c = 7, \quad a + 2b = 9, \quad b + c = 10 \)</div>
+    <div class="equation">\( x^2 + y^2 = 25, \quad x + y = 10 \)</div>
+    <div class="equation">\( x + y + z = 15, \quad x + 2y + 3z = 30, \quad x - y = 2 \)</div>
+    <div class="equation">\( x + y = 12, \quad 2x + 3y = 24, \quad x \) — целое число от 1 до 12.</div>
+</section>
+
+<!-- Текстовые задачи -->
+<section class="section" id="text">
+    <h2>Текстовые задачи</h2>
+    <div class="task"><b>Трубы и бассейн</b>: Одна труба наполняет бассейн за 6 часов, а вторая труба — за 4 часа...
+    </div>
+    <div class="task"><b>Поезд и скорость</b>: Поезд отправляется из города A в город B, двигаясь со скоростью 60 км/ч...
+    </div>
+    <div class="task"><b>Бригада рабочих</b>: Одна бригада может выполнить задание за 15 часов, а другая — за 10 часов...
+    </div>
+    <div class="task"><b>Заполнение ёмкости</b>: Ёмкость можно заполнить либо через клапан A за 8 часов, либо через клапан B за 6 часов...
+    </div>
+    <div class="task"><b>Пересечение лодок</b>: Лодка A плывёт вниз по реке со скоростью 15 км/ч, а лодка B — вверх со скоростью 5 км/ч...
+    </div>
+</section>
+
+<section class="section" id="tasks_koshey">
+    <h2>Задачи от Кощея</h2>
+    <div class="task">
+        <p>В 2010 дом стоял 2 тысячи рублей. В 2011 его цена увеличилась на 20%, а в 2012 — ещё на 20%. Сколько дом стоил к концу 2012 года?</p>
+        <button class="hint-button" onclick="toggleHint(this)">Подсказка</button>
+        <div class="hint" style="display: none;">Процентные увеличения применяются последовательно, а не суммарно.</div>
+    </div>
+    <div class="task">
+        <p>Мотоциклист проехал расстояние между двумя городами, равное 980 км, за 4 дня...</p>
+        <button class="hint-button" onclick="toggleHint(this)">Подсказка</button>
+        <div class="hint" style="display: none;">Сначала определите расстояния для первых двух дней, затем половину и остаток.</div>
+    </div>
+    <div class="task">
+        <p>За год Света прочла 90 книг. Книг русских с русскими сказками...</p>
+        <button class="hint-button" onclick="toggleHint(this)">Подсказка</button>
+        <div class="hint" style="display: none;">Используйте соотношения для расчета количества книг каждого типа.</div>
+    </div>
+</section>
+
+<section class="section" id="tasks_leshy">
+    <h2>Задачи от Лешего</h2>
+    <p>Обозначьте \( x \) как цифру десятков, а \( y \) - цифру единиц...</p>
+    <div class="task">
+        1) Двузначное число на 58 больше произведения своих цифр. Какое число задумано?<p></p>
+        <button class="hint-button" onclick="toggleHint(this)">Ответ</button>
+        <div class="hint" style="display: none;"></div>
+    </div>
+    <div class="task">
+        2) двузначное число на 37 больше произведения своих цифр. какое это число? [Ответ: (4;1)]<p></p>
+        <button class="hint-button" onclick="toggleHint(this)">Ответ</button>
+        <div class="hint" style="display: none;"></div>
+    </div>
+    <div class="task">
+        3) сумма цифр двузначного числа на 15 меньше их произведения. найди это число. [Ответ: (3;9), (5;5), (9;3)]<p></p>
+        <button class="hint-button" onclick="toggleHint(this)">Ответ</button>
+        <div class="hint" style="display: none;"></div>
+    </div>
+    <div class="task">
+        4) задумано двузначное число, сумма цифр которого в 4 раза меньше самого числа. какое число задумано? [Ответ: (1;2), (3;6), (4;8)]<p></p>
+        <button class="hint-button" onclick="toggleHint(this)">Ответ</button>
+        <div class="hint" style="display: none;"></div>
+    </div>
+    <div class="task">
+        5) если двузначное число уменьшить на 36, то получится двузначное число, записанное теми же цифрами, но в обратном порядке. найди это число. [Ответ: (5;1), (6;2), (7;3), (8;4), (9;5)]<p></p>
+        <button class="hint-button" onclick="toggleHint(this)">Ответ</button>
+        <div class="hint" style="display: none;"></div>
+    </div>
+    <div class="task">
+        6) если двузначное число увеличить на 54, то получится двузначное число, записанное теми же цифрами, но в обратном порядке. какое это число? [Ответ: (1;7), (2;8), (3;9)]<p></p>
+        <button class="hint-button" onclick="toggleHint(this)">Ответ</button>
+        <div class="hint" style="display: none;"></div>
+    </div>
+    <p>Переведи условие задачи на математический язык и реши ее методом перебора</p>
+    <div class="task">
+        1) в несколько коробок разложили поровну 28 карандашей. если бы коробок было на 3 больше, то в каждую пришлось бы положить на 3 карандаша меньше. Сколько было коробок и сколько карандашей в каждой коробке?<p></p>
+        <button class="hint-button" onclick="toggleHint(this)">Ответ</button>
+        <div class="hint" style="display: none;">Ответ: 4 коробок по 7 карандашей</div>
+    </div>
+    <div class="task">
+        2) в секции фигурного катания 40 человек. для занятий их разделили поровну на несколько групп. если бы групп было на три меньше, то в каждой было бы на 3 человека больше. сколько было групп и сколько человек в каждой группе?<p></p>
+        <button class="hint-button" onclick="toggleHint(this)">Ответ</button>
+        <div class="hint" style="display: none;">Ответ: 8 группы по 5 человек</div>
+    </div>
+    <div class="task">
+        3) Петя взял у друга интересную книгу и обещал ее вернуть через несколько дней. однако он успевал читать в день на 25 страниц больше, чем предполагал, и поэтому сумел вернуть книгу на три дня раньше срока. за сколько дней Петя прочитал книгу, если в книге 150 страниц и скорость его чтения не менялась?<p></p>
+        <button class="hint-button" onclick="toggleHint(this)">Ответ</button>
+        <div class="hint" style="display: none;">Ответ: 6 дней по 25 страниц</div>
+    </div>
+    <div class="task">
+        4) мастерской надо было сшить 300 костюмов за определенный срок, но она шила в день на три костюма больше и поэтому закончила работу на 5 дней раньше срока. сколько костюмов в день шила эта мастерская, работая с постоянной производительностью?<p></p>
+        <button class="hint-button" onclick="toggleHint(this)">Ответ</button>
+        <div class="hint" style="display: none;">Ответ: 25 дней по 12 костюмов</div>
+    </div>
+</section>
+</body>
+</html>
